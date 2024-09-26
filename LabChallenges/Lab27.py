@@ -7,7 +7,7 @@ def main():
     # Create Dictionaries for the 3 marvel characters
     MarvelChar= {
             "Starlord": #Creates first entry in the Marvel Characters variable
-            {"Real name": "Peter Quill",
+            {"Real name": "peter quill",
             "Powers": "Dance moves",
             "Archenemy": "Thanos"},
             "Mystique" : #Creates Second entry in the Marvel Characters variable
@@ -23,14 +23,16 @@ def main():
     char_name = input("Which marvel character would you like to know more about? (Starlord, Mystique or Hulk) \n")
     
     #Ecapsulates the selected name from the user
+
     Selected_name = MarvelChar.get(char_name)
-    
+
+
     #Prompt the user for the stat for the name selected name
     char_stat = input("Great, now what about their stat? (Real name, Powers or Archenemy? \n")
     
     #Assign the input to be Selected_stat and called in the print feature
-    Selected_stat = Selected_name.get(char_stat)
-
+    Selected_stat = Selected_name.get(char_stat).title()
+    
     # Will print out the end result
     print(f"{char_name}'s {char_stat} is {Selected_stat}.")
 
